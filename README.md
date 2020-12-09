@@ -13,3 +13,5 @@ Para compilar y ejecutar cada practica utiliza los siguientes comandos desde el 
 Para limpiar los ficheros generados utiliza:
 
 - make clean
+
+En cada carpeta de practica encontraras un fichero "leeme.txt" en el que se explica el funcionamiento de dicha practica y como reproducirla.
