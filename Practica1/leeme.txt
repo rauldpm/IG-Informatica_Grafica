@@ -1,0 +1,61 @@
+Alumno: Raul Del Pozo Moreno
+Asignatura: Informatica Grafica
+
+
+//*******************************************************************//
+
+Este programa dibuja un tetraedro y un cubo dada una forma de dibujado.
+
+El programa se inicia en blanco, mostrando solo los ejes de coordenadas, hasta que no se selecciona un modo de visualizado 
+no se muestra la figura.
+
+Usa las flechas de direccion del teclado para girar la figura.
+
+//*******************************************************************//
+
+		INSTRUCCIONES PARA COMPILAR Y EJECUTAR
+
+1 - En la terminal, estando en la carpeta con todos los archivos, 
+escribir "make" para compilar el programa (SOLO UNA VEZ SI NO SE BORRAN ARCHIVOS).
+
+2 - Para ejecutar, escribir "./practica1".
+
+			INSTRUCCIONES DE USO
+
+1 - Pulsa 1 o 2 en el teclado para seleccionar una figura:
+
+	Tecla: "1" -> selecciona el dibujado de un tetraedro.
+	Tecla: "2" -> selecciona el dibujado de un cubo.
+
+2 - Pulsa las siguientes teclas en el teclado para alternar 
+el modo de visualizado:
+
+	Tecla: "P" -> dibuja la figura en modo Puntos.
+	Tecla: "L" -> dibuja la figura en modo Aristas/Alambres.
+	Tecla: "F" -> dibuja la figura en modo Relleno.
+	Tecla: "C" -> dibuja la figura en modo Ajedrez.
+	Tecla: "H" -> dibuja la figura en modo Puntos,Aristas y Relleno
+
+3 - Pulsa "Q" en el teclado para salir del programa.
+
+		INSTRUCCIONES DE LIMPIEZA Y EMPAQUETADO
+
+1 - En la terminal, estando en la carpeta con todos los archivos,
+escribir "make clean" para borrar todos los archivos objeto y ejecutables.
+
+2 - En la terminal, estando en la carpeta con todos los archivos,
+escribir "make redo" para rehacer todos los archivos .cc y compilar el programa.
+
+3 - En la terminal, estando en la carpeta con todos los archivos,
+escribir "make superclean" para borrar todos los archivos objeto, ejecutables 
+y archivos temporales.
+
+4 - En la terminal, estando en la carpeta con todos los archivos,
+escribir "make clean" para borrar todos los archivos objeto y ejecutables
+
+5 - En la terminal, estando en la carpeta con todos los archivos,
+escribir "make tgz" para borrar todos los archivos objeto, ejecutables, temporales y comprimir los ficheros .h y .cc en formato .tgz
+
+//*******************************************************************//
+
+

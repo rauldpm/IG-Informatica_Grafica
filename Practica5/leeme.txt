@@ -1,0 +1,162 @@
+Alumno: Raul Del Pozo Moreno
+Asignatura: Informatica Grafica
+Practica 5 -- Interaccion
+
+//*******************************************************************//
+
+		INSTRUCCIONES PARA COMPILAR Y EJECUTAR
+
+1 - En la terminal, estando en la carpeta con todos los archivos,
+escribir "make" para compilar el programa (SOLO UNA VEZ SI NO SE BORRAN ARCHIVOS).
+
+2 - Para ejecutar, escribir: "./bin/practica5"
+
+
+//*******************************************************************//
+
+			INSTRUCCIONES DE USO
+
+Al ejecutar el programa, este hara una serie de preguntas a las 
+que se respondera "S" (SI) o "N" (NO).
+
+1 - ¿Leer archivo externo?
+	1.1 - Opcion "S":
+		1.1.1 - Introducir ruta del archivo.
+		1.1.2 - Introducir tipo de dibujado del archivo.
+		   1.1.2.1 - "R" -> Revolucion del archivo.
+		   1.1.2.2 - "C" -> Carga del archivo tal cual.
+	1.2 - Opcion "N":
+		1.2.1 - El programa pasa a la siguiente pregunta.
+
+2 - ¿Revolucion por teclado?
+	2.1 - Opcion "S":
+		2.1.1 - Introducir el numero de vertices.
+		2.1.2 - Introducir vertices.
+		2.1.3 - Introducir el eje de rotacion.
+	2.2 - Opcion "N":
+		2.2.1 - El programa pasa a la siguiente pregunta.
+
+3 - ¿Cargar textura personalizada?
+	3.1 - Opcion "S":
+		3.1.1 - Introducir ruta del archivo.
+	3.2 - Opcion "N":
+		3.2.1 - EL programa pasa a la siguiente pregunta.
+
+Una vez respondido estas preguntas el programa se ejecutara con la 
+configuracion introducida, mostrando una ventana con unos ejes y 
+una figura, que se usara con los siguientes menus en cascada.
+
+Las teclas con tabulaciones dependen de la tecla con tabulacion menor anterior.
+
+Ej: En el menu Camara, las teclas "w", "s", "a", solo sirven si se ha pulsado antes la tecla "l".
+
+//Menu Camara
+Tecla "l": Activa/Desactiva el modo camara.
+	Tecla "w": Acercar la camara al objeto.
+	Tecla "s": Alejar la camara al objeto.
+	Tecla "a": Mover la camara hacia la izquierda.
+	Tecla "d": Mover la camara hacia la derecha.
+	Tecla "r": Resetear posicion original de la camara.
+	Tecla "F1": Cambia a camara 1 - perspectiva de frente.
+	Tecla "F2": Cambia a camara 2 - perspectiva alzada.
+	Tecla "F3": Cambia a camara 3 - ortogonal perfil.
+
+//Menu Figura
+Tecla "p": Actica/Desactiva el modo figura.
+	Tecla "1": Activa figura Octaedro.
+	Tecla "2": Activa figura Tetraedro.
+	Tecla "3": Activa figura Cubo.
+	Tecla "4": Activa figura PLY.
+	Tecla "5": Activa figura Revolucion.
+		Tecla "T": Desactiva las tapas.
+		Tecla "t": Activa las tapas.
+		Tecla "+": Aumenta las revoluciones.
+		Tecla "-": Disminuye las revoluciones.
+	Tecla "6": Activa figura Jerarquico.
+		Tecla "Z": Aumenta   grado libertad 1
+		Tecla "z": Disminuye grado libertad 1
+		Tecla "X": Aumenta   grado libertad 2
+		Tecla "x": Disminuye grado libertad 2
+		Tecla "C": Aumenta   grado libertad 3
+		Tecla "c": Disminuye grado libertad 3
+		Tecla "V": Aumenta   grado libertad 4
+		Tecla "v": Disminuye grado libertad 4
+		Tecla "A": Aumenta   velocidad grado libertad 1
+		Tecla "a": Disminuye velocidad grado libertad 1
+		Tecla "S": Aumenta   velocidad grado libertad 2
+		Tecla "s": Disminuye velocidad grado libertad 2
+		Tecla "D": Aumenta   velocidad grado libertad 3
+		Tecla "d": Disminuye velocidad grado libertad 3
+		Tecla "F": Aumenta   velocidad grado libertad 4
+		Tecla "f": Disminuye velocidad grado libertad 4
+		Tecla "q": Pone a 0 el grado libertad 1
+		Tecla "w": Pone a 0 el grado libertad 2
+		Tecla "e": Pone a 0 el grado libertad 3
+		Tecla "R": Activa animacion 
+		Tecla "r": Desactiva animacion 
+	Tecla "7": Activa figura Tablero.
+
+//Menu Dibujado
+Tecla "o": Activa/Desactiva el modo dibujado.
+	Tecla "1": Activa modo Puntos.
+	Tecla "2": Activa modo Lineas.
+	Tecla "3": Activa modo Relleno.
+	Tecla "4": Activa modo Ajedrez.
+	Tecla "5": Activa modo Prueba1.
+
+//Menu Iluminacion
+Tecla "i": Activa/Desactiva el modo iluminacion.
+	Tecla "F1": Activa/Desactiva Luz 1. 
+	Tecla "F2": Activa/Desactiva Luz 2.
+	Tecla "F3": Activa/Desactiva Luz 3. (solo modo Jerarquico).
+	Tecla "F4": Mueve Luz 1 alrededor del objeto.
+	Tecla "F5": Mueve Luz 2 alrededor del objeto.
+	Tecla "F6": Activa material 1.
+	Tecla "F7": Activa material 2.
+	Tecla "F8": Activa material 3.
+	Tecla "F9": Activa material 4.
+	Tecla "m": Activa/Desactiva el modo movimiento de la luz.
+		Tecla "1": Movimiento negativo en el eje X de las luces.
+		Tecla "2": Movimiento negativo en el eje Y de las luces.
+		Tecla "3": Movimiento negativo en el eje Z de las luces.
+		Tecla "4": Movimiento positivo en el eje X de las luces.
+		Tecla "5": Movimiento positivo en el eje Y de las luces.
+		Tecla "6": Movimiento positivo en el eje Z de las luces.
+		Tecla "7": Reseteo de la posicion en el eje X de las luces.
+		Tecla "8": Reseteo de la posicion en el eje Y de las luces.
+		Tecla "9": Reseteo de la posicion en el eje Z de las luces.
+
+//Menu Raton
+"CLICK DERECHO": Si se mantiene pulsado y se mueve el raton movera 
+				 la camara alrededor del objeto.
+
+
+//Teclas Generales
+Tecla "y": Alterna el modo FLAT/GOURAUD.
+Tecla "u": Activa/Desactiva el modo textura.
+Tecla "Flecha Arriba": Rota el mundo hacia arriba.
+Tecla "Flecha Abajo": Rota el mundo hacia abajo.
+Telca "Flecha Izquierda": Rota el mundo hacia la izquierda.
+Tecla "Flecha Derecha": Rota el mundo hacia la derecha.
+Tecla "PAGE_DOWN": Disminuye el zoom.
+Tecla "PAGE_UP": Aumenta el zoom.
+Tecla "ESC": Sale del programa.
+
+
+
+
+//*******************************************************************//
+
+		      INSTRUCCIONES DE LIMPIEZA 
+
+1 - En la terminal, estando en la carpeta con todos los archivos,
+escribir "make clean" para borrar todos los archivos objeto y ejecutables.
+
+2 - En la terminal, estando en la carpeta con todos los archivos,
+escribir "make redo" para rehacer todos los archivos .cc y compilar el programa.
+
+3 - En la terminal, estando en la carpeta con todos los archivos,
+escribir "make superclean" para borrar todos los archivos objeto, ejecutables
+y archivos temporales.
+
+//*******************************************************************//
